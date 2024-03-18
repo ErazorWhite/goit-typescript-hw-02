@@ -2,12 +2,19 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 
+type PageStatus = "open" | "close";
+
+interface PageDetails {
+  createAt: Date;
+  updateAt: Date;
+}
+
 type pageType = {
   title: string;
-  likes: number,
-  accounts: string[],
-  status: string,
-  details?: object,
+  likes: number;
+  accounts: string[];
+  status: PageStatus;
+  details?: PageDetails;
 };
 
 const page1: pageType = {
